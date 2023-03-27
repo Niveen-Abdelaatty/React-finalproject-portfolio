@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 
 import { getAllProjectsImagesAPI } from './services/imagesApi';
-import './App.css';
+import { Container } from 'react-bootstrap';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   const [images, setImages] = useState(null);
@@ -11,16 +13,22 @@ function App() {
     setImages(response);
   };
 
-  useEffect(() => {
-    getAllImages();
-  }, []);
+  // useEffect(() => {
+  //   getAllImages();
+  // }, []);
 
   console.log(images);
 
   return (
-    <div className='App'>
-      <h1>Portfolio</h1>
-    </div>
+    <>
+      <Header />
+      <main className='py-4'>
+        <Container>
+          <h1>Portfolio</h1>
+        </Container>
+      </main>
+      <Footer />
+    </>
   );
 }
 
