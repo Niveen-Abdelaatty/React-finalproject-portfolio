@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-export const getAllProjectsImagesAPI = async (searchTerm) => {
+export const getWeatherData = async (searchTerm) => {
 
-  const apiKey = '98e3fb1f';
+  const apiKey = 'f4ab1ec78ad15221e577815fd50f5160';
 
-  const url = `http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`;
+  const url = `http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=${apiKey}`;
 
   try {
     const res = await axios.get(url);

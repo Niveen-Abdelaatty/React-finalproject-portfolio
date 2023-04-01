@@ -1,14 +1,17 @@
 import { Card } from 'react-bootstrap';
 
-const Project = ({ project, images }) => {
+const Project = ({ project }) => {
   return (
-    <Card className='my-3 p-3 rounded' style={{ width: '18rem' }}>
-      <Card.Img src={images.Poster} variant='top' />
+    <Card className='m-1 p-2' style={{ width: '20rem' }}>
+      <Card.Img variant='top' src={project.image} />
       <Card.Body>
-        <Card.Title as='div'>
-          <strong>{project.name}</strong>
-        </Card.Title>
+        <Card.Title>{project.name}</Card.Title>
+        <Card.Text>{project.description}</Card.Text>
+        <Card.Text>Available In: </Card.Text>
       </Card.Body>
+      <Card.Footer>
+        <small className='text-muted'>Last updated 3 mins ago</small>
+      </Card.Footer>
     </Card>
   );
 };
