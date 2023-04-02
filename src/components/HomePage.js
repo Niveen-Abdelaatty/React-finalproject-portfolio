@@ -19,7 +19,7 @@ function HomePage() {
   }, []);
 
   // const city = cites.city;
-  // console.log(city);
+  console.log(cites);
 
   return (
     <>
